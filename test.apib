@@ -236,7 +236,7 @@ HOST: https://api.birdeye.com/resources
             errorCode: 1011,
             errorMessage: "Business id is invalid"
         }
-        
+
 ## 1380 [/1380]
 
 + Model (application/json)
@@ -963,13 +963,22 @@ HOST: https://api.birdeye.com/resources
             errorCode: 2037,
             errorMessage: "The survey doesn't belong to the account."
         }
-
+        
 ## 2044 [/2044]
 
 + Model (application/json)
 
         {
             errorCode: 2044,
+            errorMessage: "Survey already completed"
+        }
+
+## 2093 [/2093]
+
++ Model (application/json)
+
+        {
+            errorCode: 2093,
             errorMessage: "Survey Field Type passed is unknown"
         }
 
@@ -1378,7 +1387,6 @@ HOST: https://api.birdeye.com/resources
             errorMessage: "ReviewSources passed are invalid"
         }
 
-
 # Group Survey
 
 ## Create Survey [/v1/survey/external/create/{businessId}{?api_key}]
@@ -1445,7 +1453,7 @@ Create a new survey
         </tr>
         <tr>
             <td>400 Bad Request</td>
-            <td>2044</td>
+            <td>2093</td>
             <td>Survey Field Type passed is unknown</td>
         </tr>
         <tr>
@@ -1712,6 +1720,10 @@ Create a new survey
 
     [2044][]
     
++ Response 400
+
+    [2093][]
+
 + Response 400
 
     [2045][]
